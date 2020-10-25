@@ -1,0 +1,25 @@
+// Media sizes
+$desktop-lg: 1920px;
+$desktop-md: 1440px;
+$desktop: 1200px;
+$tablet-landscape: 1024px;
+$tablet-portrait: 992px;
+$mobile-landscape: 768px;
+$mobile-middle: 568px;
+$mobile-portrait: 479px;
+
+// Truncate
+@mixin text-truncate() {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// Placeholders
+@mixin input-placeholder {
+  &.placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &:-ms-input-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
+}

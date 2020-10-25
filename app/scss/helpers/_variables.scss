@@ -1,0 +1,49 @@
+// =====Basic colors=====
+$white: #fff;
+$black: #000;
+$gray: #ccc;
+
+// Custom colors...
+$text: #686868;
+$hover-color: #ac782a;
+$background: #19191b;
+
+// =====Typography base=====
+$main-font: 'El Messiri', Roboto, sans-serif;
+$sec-font: 'Roboto', sans-serif;
+$font-weight: 400;
+$font-size: 18px;
+$line-height: 1.5;
+$txt-color: $white;
+
+// =====Typography buttons=====
+$btn-ff: $main-font;
+$btn-fz: 20px;
+$btn-lh: 30px;
+$btn-fw: 500;
+$btn-color: $txt-color;
+$btn-bgc: linear-gradient(90deg, #563B2A 0%, #AC782A 100%);
+$btn-radius: 5px;
+
+// =====Malihu scrollbar customs=====
+// $dragger_bar-color: #2c3e50;
+// $dragger_bar-width: 4px;
+// $dragger_bar-radius: 14px;
+// $dragger_rail-color:#7f8c8d;
+// $scrollTools-opacity: 1;
+
+// =====Styles scrollbars=====
+// .mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+//   background-color: $dragger_bar-color;
+// }
+// .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+//   background-color: $dragger_bar-color;
+//   width: $dragger_bar-width;
+//   border-radius: $dragger_bar-radius;
+// }
+// .mCSB_scrollTools .mCSB_draggerRail {
+//   background-color: $dragger_rail-color;
+// }
+// .mCSB_scrollTools {
+//   opacity: $scrollTools-opacity;
+// }

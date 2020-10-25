@@ -1,0 +1,39 @@
+.footer {
+  .container {
+
+  }
+}
+
+// Develop
+.develop {
+  background-color: #000;
+  color: #fff;
+  padding: 6px;
+  position: relative;
+  text-align: center;
+  font-size: 14px;
+  a {
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    &:hover {
+      &:after {
+        transform: scale(1);
+      }
+    }
+    &:after {
+      content: '';
+      display: block;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 1px;
+      width: 100%;
+      background-color: #fff;
+      transition: 0.3s ease;
+      transform: scale(0);
+    }
+  }
+}
