@@ -1,7 +1,7 @@
 // Header start
 .header {
   background-color: $background;
-  padding: 18px 0;
+  padding: 20px 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   position: fixed;
   top: 0;
@@ -9,18 +9,108 @@
   right: 0;
   z-index: 999;
 
-  &__container {}
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-  &__nav {}
+  &__nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
 
-  &__widget {}
+  &__widget {
+    display: flex;
+    align-items: center;
+  }
+
+  &__btn {
+    max-width: 160px;
+    width: 100%;
+    padding: 7px 14px
+  }
 }
 
 // Social list start
 .social-list {
-  &__items 
+  list-style: none;
+  display: flex;
+  margin-right: 36px;
 
-  &__link {}
+  &__items {
+    margin-right: 8px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__link {
+    display: flex;
+    background-color: $hover-color;
+    border: 1px solid $hover-color;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    overflow: hidden;
+    position: relative;
+
+    &:hover {
+      @media only screen and (min-width: 1025px) {
+        &:after {
+          transform: translate(-50%, -230%);
+        }
+        &:before {
+          opacity: 0.7;
+          transform: translate(-50%, -50%);
+        } 
+      }
+    }
+
+    &:after,
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 16px;
+      width: 16px;
+      transition: 0.2s ease;
+      opacity: 1;
+    }
+
+    &:before {
+      transform: translate(-50%, 120%);
+    }
+
+    &.inst-link {
+      &:after {
+        background: url(../img/icon-inst.svg) center / cover no-repeat;
+      }
+
+      &:before {
+        background: url(../img/icon-inst.svg) center / cover no-repeat;
+      }
+
+    }
+    &.telegram-link {
+      &:after {
+        width: 14px;
+        height: 12px;
+        background: url(../img/icon-telegram.svg) center / cover no-repeat;
+      }
+
+      &:before {
+        width: 14px;
+        height: 12px;
+        background: url(../img/icon-telegram.svg) center / cover no-repeat;
+      } 
+    }
+  }
 }
 
 // Logo start
@@ -30,6 +120,8 @@
 
 // Nav block start
 .nav {
+  margin: 0 auto;
+
   ul {
     list-style: none;
     display: flex;
@@ -74,5 +166,53 @@
         }
       }
     }
+  }
+}
+
+// Burger
+.burger {
+  height: 34px;
+  width: 34px;
+  display: none;
+
+  &__holder {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.line {
+  display: inline-block;
+  width: 100%;
+  height: 2px;
+  background-color: $hover-color;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,- 50%);
+  transition: 0.2s ease;
+
+  &:after,
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background-color: $hover-color;
+    transition: 0.2s ease;
+  }
+
+  &:after {
+    bottom: -8px;
+  }
+
+  &:before {
+    bottom: 8px;
   }
 }

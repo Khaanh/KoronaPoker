@@ -5,12 +5,10 @@
   font-weight: $btn-fw;
   color: $btn-color;
   border: 1px solid transparent;
-  background: $btn-bgc;
+  position: relative;
   border-radius: $btn-radius;
-
-  padding: 16px 14px;
+  padding: 14px;
   text-align: center;
-
   min-width: 100px;
   display: inline-block;
   white-space: nowrap;
@@ -18,12 +16,49 @@
   cursor: pointer;
   text-decoration: none;
   outline: none;
+  overflow: hidden;
   appearance: none;
   background-origin: border-box;
   transition: 0.2s ease;
+
   &:hover {
+    &:before {
+      opacity: 1;      
+    }
+    &:after {
+      opacity: 0;
+    }
   }
-  &:focus {}
+  &:focus {
+    border: 1px solid #ccc;
+  }
+
+  &:after,
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.4s ease-in-out;
+    z-index: -1;
+  }
+
+  &:after {
+    background: linear-gradient(90deg, #563b2a 0%, #ac782a 100%);
+    opacity: 1;
+  }
+
+  &:before {
+    background: linear-gradient(90deg, #ac782a 0%, #563b2a 100%);
+    opacity: 0;
+  }
+
+  span {
+    position: relative;
+    z-index: 30;
+  }
 }
 
 button[disabled] {
