@@ -1,0 +1,78 @@
+// Header start
+.header {
+  background-color: $background;
+  padding: 18px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+
+  &__container {}
+
+  &__nav {}
+
+  &__widget {}
+}
+
+// Social list start
+.social-list {
+  &__items 
+
+  &__link {}
+}
+
+// Logo start
+.logo {
+  display: flex;
+}
+
+// Nav block start
+.nav {
+  ul {
+    list-style: none;
+    display: flex;
+
+    li {
+      margin-right: 48px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      a {
+        font-family: $main-font;
+        font-size: 16px;
+        line-height: 30px;
+        color: $white;
+        display: inline-block;
+        position: relative;
+        transition: 0.2s linear;
+        text-decoration: none;
+        padding: 4px 8px;
+        &:hover {
+          @media only screen and (min-width: 1025px) {
+            color: $hover-color;
+
+            &:after {
+              width: calc(100% - 16px);
+            }    
+          }
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: 6px;
+          left: 8px;
+          width: 0%;
+          transform-origin: left;
+          transition: 0.2s linear;
+          height: 1px;
+          background-color: $hover-color;
+        }
+      }
+    }
+  }
+}
