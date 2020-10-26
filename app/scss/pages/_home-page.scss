@@ -194,12 +194,114 @@
     transform: rotate(0);
     transition: 0.2s ease;
   }
-
-  &__desc {}
 }
 
 .profit-cube {
   position: absolute;
   bottom: 0;
   right: 0;  
+}
+
+// ----- Application block start -----
+.app-block {
+  background-color: $background;
+  padding-bottom: 146px;
+  position: relative;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    background-image: url(../img/hero-bg.png);
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #0e0e0f;
+    box-shadow: 0 0 50px #0d0d0e;
+    border-radius: 10px;
+    padding: 86px;
+    position: relative;
+  }
+
+  &__col {}
+
+  &__descr {
+    text-align: left;
+    color: #fff;
+    margin-bottom: 30px;
+    max-width: 390px;
+
+    h2 {
+      text-align: left;
+      margin-bottom: 14px;
+    }
+
+    p {
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+
+  .chips-01 {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+// App list start
+.app-list {
+  list-style: none;
+  margin: 0 -10px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 480px;
+  width: 100%;
+
+  &__items {
+    margin: 10px;
+    max-width: 210px;
+    flex: 1 1 50%;
+  }
+
+  &__link {
+    display: flex;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    padding: 12px 20px;
+    height: 70px;
+    background-color: #242424;
+
+    &:hover {
+      @media only screen and (min-width: 1025px) {
+        &:after {
+          width: 100%;     
+        }
+      }
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 0%;
+      transition: 0.3s ease-in-out;
+      background-color: #ab864e;
+    }
+  }
+
+  &__label {
+    display: flex;
+    position: relative;
+    z-index: 30;
+  }
+}
+
+// Smartphone block start
+.smartphone {
+  position: absolute;
+  top: -45px;
+  right: 6%;
 }
