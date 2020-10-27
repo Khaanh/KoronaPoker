@@ -1,3 +1,7 @@
+// Subtitle h2
+.subtitle-h2 {
+  margin-bottom: 60px;
+}
 // ----- Hero block start -----
 .hero {
   background-image: url(../img/hero-bg.png);
@@ -304,4 +308,138 @@
   position: absolute;
   top: -45px;
   right: 6%;
+}
+
+// ----- Video-block start-----
+.video-block {
+  position: relative;
+  background-color: $background;
+  padding-bottom: 120px;
+
+  &:after,
+  &:before {
+    content: '';
+    display: block;
+    width: 600px;
+    height: 520px;
+    position: absolute;
+    top: 0;
+    background-image: url(../img/profit-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+  }
+
+  &:after {
+    left: 0;
+    background-position: left;
+  }
+
+  &:before {
+    right: 0;
+    background-position: right;
+  }
+}
+
+.video-frame {
+  max-width: 960px;
+  width: 100%;
+  height: 420px;
+  position: relative;
+  z-index: 30;
+  border-radius: 10px;
+  margin: 0 auto;
+
+  &__holder {
+    border-radius: 10px;
+    overflow: hidden;
+  }
+}
+
+.video-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+
+  &._is-active {
+    z-index: 30;
+  }
+}
+
+.video-play {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  overflow: hidden;
+  background-color: #ab864e;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0;
+
+  &:hover {
+    @media only screen and (min-width: 1025px) {
+      border: 2px solid #fff;
+      &:after {
+        transform: scale(0.9);
+      }
+    }
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 24px;
+    left: 32px;
+    border: 10px solid transparent; 
+    border-left: 10px solid #fff;
+    transform: scale(1.2);
+    transform-origin: center;
+    transition: 0.2s linear;
+  }
+}
+
+.card-video {
+  position: absolute;
+  bottom: -20%;
+  right: -10%;
+}
+
+.chips-02 {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+// ----- Exchequer block start-----
+.exchequer-block {
+  background-color: $background;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  padding-bottom: 120px;
+}
+
+.exchequer-app {
+  max-width: 100%;
+  justify-content: center;
+  margin-bottom: 40px;
+
+  &__items {
+    max-width: 260px;
+    width: 100%;
+    margin: 0 10px;
+  }
+
+  &__link {
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+  }
 }
