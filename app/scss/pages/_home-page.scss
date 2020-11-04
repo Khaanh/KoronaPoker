@@ -412,10 +412,17 @@
 }
 
 .chips-02 {
+  display: inline-block;
   position: absolute;
   left: 0;
   top: 0;
 }
+
+// ----- Our tournaments block -----
+.our-tournaments {
+  background-color: $background;
+}
+
 
 // ----- Bonuses block -----
 .bonuses-block {
@@ -491,5 +498,106 @@
     height: 100px;
     align-items: center;
     justify-content: center;
+  }
+}
+
+// ----- Block FAQ -----
+.faq-block {
+  background-color: $background;
+  padding: 60px 0;
+  position: relative;
+}
+
+.faq-card {
+  position: absolute;
+  display: inline-block;
+  top: 0%;
+  left: 0;
+}
+
+.chips-03 {
+  position: absolute;
+  bottom: -10%;
+  right: 20%;
+}
+
+// ----- Block reviews -----
+.reviews-block {
+  background-color: $background;
+  padding: 60px 0;
+}
+
+.reviews-container {
+  position: relative;
+}
+
+.reviews-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 100%;
+  z-index: 300;
+  height: 24px;
+
+  .slick-arrow {
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    background-image: url(../img/icon-navigation.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 12px;
+    height: 20px;
+    color: transparent;
+    transition: 0.2s ease;
+    opacity: 1;
+
+    &:hover {
+      @media only screen and (min-width: 1025px) {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  .slick-prev {
+    left: -4%;
+  }
+
+  .slick-next {
+    right: -4%;
+    transform: rotate(180deg);
+  }
+}
+
+.reviews-list {
+  list-style: none;
+
+  &__items {
+    background: #242424;
+    border-radius: 5px 5px 0px 0px;
+    padding: 40px 30px 60px 30px;
+    min-height: 256px;
+    max-width: 360px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  &__author {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ab864e;
+    padding: 12px 30px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
   }
 }
