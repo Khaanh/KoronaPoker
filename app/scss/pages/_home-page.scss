@@ -417,13 +417,63 @@
   top: 0;
 }
 
+// ----- Bonuses block -----
+.bonuses-block {
+  background-color: $background;
+  padding: 60px 0;
+}
+
+.bonuses-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 -10px;
+
+  &__items {
+    background-image: url(../img/profit-bg.png);
+    background-position: center;
+    background-size: auto;
+    background-repeat: repeat;
+    background-color: rgba(36, 36, 36, .06);
+    padding: 40px;
+    color: #fff;
+    text-align: left;
+    font-size: 18px;
+    line-height: 25px;
+    box-shadow: 0 0 35px #151413;
+    border-radius: 5px;
+    flex: 1 1 33.3333%;
+    max-width: 360px;
+    min-height: 276px;
+    margin: 0 10px;
+    position: relative;
+
+    picture {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  &__caption {
+    color: #fff;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 32px;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+}
+
 // ----- Exchequer block start-----
 .exchequer-block {
   background-color: $background;
   font-size: 18px;
   line-height: 25px;
   text-align: center;
-  padding-bottom: 120px;
+  padding: 60px 0;
 }
 
 .exchequer-app {
