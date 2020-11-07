@@ -416,6 +416,34 @@
 
 // ----- Our tournaments block -----
 .our-tournaments {
+
+  table {
+    max-width: 100%;
+    width: 100%;
+    text-align: left;
+
+    thead {}
+
+    tbody {
+      tr {
+        background-color: #242424;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 5px;
+        margin-bottom: 10px;
+        transition: 0.2s ease;
+
+        &:hover {
+          @media only screen and (min-width: 1025px) {
+            background-color: $hover-color;
+          }
+        }
+
+        td {
+          border: 1px solid #fff;
+        }
+      }
+    }
+  }
 }
 
 
