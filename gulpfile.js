@@ -43,7 +43,7 @@ gulp.task('sass', function() {
 	return gulp.src('app/scss/**/*.scss')
 	.pipe(sourcemaps.init())
 	.pipe(sass().on('error', sass.logError))
-	.pipe(prefixer(['last 5 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'], {cascade: false}))
+	.pipe(prefixer(['last 5 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'], {cascade: true}))
 	.pipe(gulp.dest('app/css'))
 	.pipe(cleanCSS({compatibility: 'ie8'}))
 	.pipe(concat('main.css'))

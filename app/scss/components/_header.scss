@@ -29,7 +29,8 @@
   &__btn {
     max-width: 160px;
     width: 100%;
-    padding: 7px 14px
+    padding: 7px 14px;
+    z-index: 30;
   }
 }
 

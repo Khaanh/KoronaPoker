@@ -392,6 +392,60 @@
       </section>
       <!-- .block-faq -->
 
+      <section class="request-block">
+        <div class="container">
+          <div class="request-block__wrapper">
+            <div class="request-block__descr">
+              <div class="request-block__caption">Оставьте заявку на вступление в клуб</div>
+              <p>После отправки формы, в течение 10  минут  с вами свяжется менеджер.</p>
+            </div>
+            <form action="#" class="form form--request">
+              <div class="form__wrapper">
+                <div class="form__title">Оставить заявку</div>
+                <div class="form__holder">
+                  <label class="form__label">
+                    <input type="text" class="form__control" placeholder="Имя">
+                  </label>
+                  <label class="form__label">
+                    <input type="tel" class="form__control js-maskPhone" placeholder="+7 (999) 999-99-99">
+                  </label>
+                  <button type="submit" class="btn form__btn">Оставить заявку</button>
+                </div>
+                <div class="form__txt">
+                  <p>Нажимая на кнопку «Оставить заявку», вы соглашаетесь с <a href="#">политикой конфиденциальности</a>.</p>
+                </div>
+              </div>
+            </form>
+
+            <i class="request-decor request-decor--01">
+              <picture>
+                <source srcset="./img/request-decor-01.webp" type="image/webp">
+                <img src="./img/request-decor-01.png" alt="decor" width="78" height="98">
+              </picture>
+            </i>
+            <i class="request-decor request-decor--02">
+              <picture>
+                <source srcset="./img/request-decor-02.webp" type="image/webp">
+                <img src="./img/request-decor-02.png" alt="decor" width="78" height="87">
+              </picture>
+            </i>
+            <i class="request-decor request-decor--03">
+              <picture>
+                <source srcset="./img/request-decor-03.webp" type="image/webp">
+                <img src="./img/request-decor-03.png" alt="decor" width="108" height="116">
+              </picture>
+            </i>
+            <i class="request-decor request-decor--04">
+              <picture>
+                <source srcset="./img/request-decor-04.webp" type="image/webp">
+                <img src="./img/request-decor-04.png" alt="decor" width="282" height="202">
+              </picture>
+            </i>
+          </div>
+        </div>
+      </section>
+      <!-- .request-block -->
+
       <section class="reviews-block">
         <div class="container">
           <h2 class="subtitle-h2">Посмотрите отзывы тех, кто уже <br> зарабатывает с нами</h2>
@@ -399,27 +453,35 @@
             <div class="reviews-nav js-reviewsNav"></div>
             <ul class="reviews-list js-reviewsCarousel">
               <li class="reviews-list__items">
-                <p>Отличная платформа, приятная игра, сдержанные соперники. Это настоящая битва!</p>
-                <div class="reviews-list__author">
-                  <span>Solomon</span>
+                <div class="reviews-list__holder">
+                  <p>Отличная платформа, приятная игра, сдержанные соперники. Это настоящая битва!</p>
+                  <div class="reviews-list__author">
+                    <span>Solomon</span>
+                  </div>
                 </div>
               </li>
               <li class="reviews-list__items">
-                <p>Мне все понравилось, менеджеры супер. Вообще не умел играть. Обучили, но до совершенства ещё далеко. Мне нравится играть в короне.</p>
-                <div class="reviews-list__author">
-                  <span>Stas22</span>
+                <div class="reviews-list__holder">
+                  <p>Мне все понравилось, менеджеры супер. Вообще не умел играть. Обучили, но до совершенства ещё далеко. Мне нравится играть в короне.</p>
+                  <div class="reviews-list__author">
+                    <span>Stas22</span>
+                  </div>
                 </div>
               </li>
               <li class="reviews-list__items">
-                <p>Играл во многих клубах, принцип везде 1, но оборащение и умение слышать у короны на высшем уровне. Они делает то, что говорят</p>
-                <div class="reviews-list__author">
-                  <span>Maestro43</span>
+                <div class="reviews-list__holder">
+                  <p>Играл во многих клубах, принцип везде 1, но оборащение и умение слышать у короны на высшем уровне. Они делает то, что говорят</p>
+                  <div class="reviews-list__author">
+                    <span>Maestro43</span>
+                  </div>
                 </div>
               </li>
               <li class="reviews-list__items">
-                <p>Я давно работаю с клубом корона по агентской программе, я рад что их встретил.</p>
-                <div class="reviews-list__author">
-                  <span>Perfecto1</span>
+                <div class="reviews-list__holder">
+                  <p>Я давно работаю с клубом корона по агентской программе, я рад что их встретил.</p>
+                  <div class="reviews-list__author">
+                    <span>Perfecto1</span>
+                  </div>
                 </div>
               </li>
             </ul>
@@ -438,6 +500,7 @@
     window.jQuery || document.write('<script src="js/libs/jquery.min.js"><\/script>')
   </script>
 	<script src="js/libs/slick.min.js"></script>
+  <script src="js/libs/jquery.maskedinput.min.js"></script>
 	<script src="js/main.min.js"></script>
 </body>
 </html>

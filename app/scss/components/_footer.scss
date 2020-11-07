@@ -1,6 +1,45 @@
 .footer {
-  .container {
+  background-color: #0e0e0f;
+  padding: 38px 0 45px;
 
+  &__nav {
+    display: flex;
+    align-items: center;
+    margin-bottom: 62px;
+  }
+
+  &__widget {
+    display: flex;
+    align-items: center;
+  }
+
+  &__bottom {
+    font-family: $sec-font;
+    font-size: 16px;
+    line-height: 20px;
+    color: #a1a1a1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    a {
+      font-family: $sec-font;
+      font-size: 16px;
+      line-height: 20px;
+      color: #a1a1a1;
+      text-decoration: none;
+      transition: 0.2s ease;
+      
+      &:hover {
+        @media only screen and (min-width: 1025px) {
+          color: #fff;
+        }
+      }
+    }
+
+    p {
+      margin: 0;
+    }
   }
 }
 

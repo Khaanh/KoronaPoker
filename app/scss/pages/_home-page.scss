@@ -5,7 +5,6 @@
 // ----- Hero block start -----
 .hero {
   background-image: url(../img/hero-bg.png);
-  background-color: $background;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -116,7 +115,6 @@
 // ----- Player profit start -----
 .player-profit {
   padding: 50px 0 120px;
-  background-color: $background;
 }
 // Profit-list start
 .profit-list {
@@ -208,7 +206,6 @@
 
 // ----- Application block start -----
 .app-block {
-  background-color: $background;
   padding-bottom: 146px;
   position: relative;
 
@@ -313,7 +310,6 @@
 // ----- Video-block start-----
 .video-block {
   position: relative;
-  background-color: $background;
   padding-bottom: 120px;
 
   &:after,
@@ -420,13 +416,11 @@
 
 // ----- Our tournaments block -----
 .our-tournaments {
-  background-color: $background;
 }
 
 
 // ----- Bonuses block -----
 .bonuses-block {
-  background-color: $background;
   padding: 60px 0;
 }
 
@@ -476,7 +470,6 @@
 
 // ----- Exchequer block start-----
 .exchequer-block {
-  background-color: $background;
   font-size: 18px;
   line-height: 25px;
   text-align: center;
@@ -503,7 +496,6 @@
 
 // ----- Block FAQ -----
 .faq-block {
-  background-color: $background;
   padding: 60px 0;
   position: relative;
 }
@@ -523,7 +515,6 @@
 
 // ----- Block reviews -----
 .reviews-block {
-  background-color: $background;
   padding: 60px 0;
 }
 
@@ -577,9 +568,11 @@
 .reviews-list {
   list-style: none;
 
-  &__items {
+  &__items {}
+
+  &__holder {
     background: #242424;
-    border-radius: 5px 5px 0px 0px;
+    border-radius: 5px 5px 0 0;
     padding: 40px 30px 60px 30px;
     min-height: 256px;
     max-width: 360px;
@@ -593,11 +586,70 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ab864e;
+    background: linear-gradient(90deg, #563B2A 0%, #AC782A 100%);
     padding: 12px 30px;
     color: #fff;
     font-weight: 600;
     font-size: 18px;
     line-height: 24px;
+  }
+}
+
+// ----- Block request -----
+.request-block {
+  padding: 60px 0;
+  &__wrapper {
+    background-color: #0e0e0f;
+    background-image: url(../img/request-bg.png);
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 90px;
+    display: flex;
+    position: relative;
+    min-height: 380px;
+  }
+
+  &__descr {
+    max-width: 400px;
+    margin-right: auto;
+    width: 100%;
+    color: #fff;
+    text-align: left;
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  &__caption {
+    font-size: 35px;
+    line-height: 45px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 16px;
+  }
+}
+
+.request-decor {
+  position: absolute;
+
+  &--01 {
+    top: 0;
+    left: 0;
+  }
+
+  &--02 {
+    bottom: 0;
+    left: 30px;
+  }
+
+  &--03 {
+    top: 0;
+    right: 42%;
+  }
+
+  &--04 {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0)
   }
 }
