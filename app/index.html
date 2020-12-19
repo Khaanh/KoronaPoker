@@ -44,7 +44,7 @@
         </div>
 
         <div class="hero__illustr">
-          <div class="hero__cards">
+          <div class="hero__cards" id="cards-tilt" data-tilt>
             <picture>
               <source srcset="./img/cards-a.webp" type="image/webp">
               <img src="./img/cards-a.png" alt="4 cards" width="550" height="550">
@@ -167,9 +167,12 @@
               </ul>
             </div>
             <div class="smartphone">
-              <picture>
+              <picture class="tilt-wrapper js-tiltSmartphone" data-tilt>
                 <source srcset="./img/smartphone.webp" type="image/webp">
                 <img src="./img/smartphone.png" alt="smartphone">
+                <div class="tilt-inner">
+                  <img src="./img/ppoker-icon.png" alt="ppoker" width="189" height="111">
+                </div>
               </picture>
             </div>
           </div>
@@ -193,16 +196,14 @@
         <div class="container">
           <h2 class="subtitle-h2">Посмотрите короткое видео о нас</h2>
           <div class="video-frame">
-            <button class="video-play js-playVideo"></button>
+            <button class="video-play js-playVideo" id="js-playVideo"></button>
             <div class="video-frame__holder">
               <picture>
                 <source srcset="./img/video-img.webp" type="image/webp">
                 <img src="./img/video-img.jpg" alt="video" width="960" height="420">
               </picture>
             </div>
-            <div class="video-content" id="video-content">
-              <!-- <iframe id="frame" width="100%" height="100%" src="https://www.youtube.com/embed/oqkdB7It5Go" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-            </div>
+            <div class="video-content" id="video-content"></div>
             <div class="card-video">
               <picture>
                 <source srcset="./img/cards-video.webp" type="image/webp">
@@ -218,61 +219,131 @@
         <div class="container">
           <h2 class="subtitle-h2">Наши турниры</h2>
 
-          <table>
-            <thead>
-              <tr>
-                <th>Дата</th>
-                <th>Название</th>
-                <th>Бай-ин</th>
-                <th>Гарантия</th>
-                <th>Игра</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>MON 09:00</td>
-                <td>Holdem WarmUp</td>
-                <td>3pp</td>
-                <td>---</td>
-                <td>NLH</td>
-              </tr>
-              <tr>
-                <td>MON 12:00</td>
-                <td>Holdem 8-Max</td>
-                <td>8pp</td>
-                <td>1000pp</td>
-                <td>NLH</td>
-              </tr>
-              <tr>
-                <td>MON 12:00</td>
-                <td>Satellite 3K</td>
-                <td>8pp</td>
-                <td>10 tickets</td>
-                <td>NLH</td>
-              </tr>
-              <tr>
-                <td>MON 09:00</td>
-                <td>Holdem WarmUp</td>
-                <td>3pp</td>
-                <td>---</td>
-                <td>NLH</td>
-              </tr>
-              <tr>
-                <td>MON 12:00</td>
-                <td>Holdem 8-Max</td>
-                <td>8pp</td>
-                <td>1000pp</td>
-                <td>NLH</td>
-              </tr>
-              <tr>
-                <td>MON 12:00</td>
-                <td>Satellite 3K</td>
-                <td>8pp</td>
-                <td>10 tickets</td>
-                <td>NLH</td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="tournaments-table">
+            <i class="decor-elem-1">
+              <picture>
+                <source srcset="./img/poker-chips-4.webp" type="image/webp">
+                <img src="./img/poker-chips-4.png" alt="decor" width="134" height="155">
+              </picture>
+            </i>
+            <i class="decor-elem-2">
+              <picture>
+                <source srcset="./img/poker-chips-5.webp" type="image/webp">
+                <img src="./img/poker-chips-5.png" alt="decor" width="208" height="240">
+              </picture>
+            </i>
+            <i class="decor-elem-3">
+              <picture>
+                <source srcset="./img/tour-decor.webp" type="image/webp">
+                <img src="./img/tour-decor.png" alt="decor" width="100" height="180">
+              </picture>
+            </i>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>Дата</th>
+                  <th>Название</th>
+                  <th>Бай-ин</th>
+                  <th>Гарантия</th>
+                  <th>Игра</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>MON 09:00</td>
+                  <td>Holdem WarmUp</td>
+                  <td>3pp</td>
+                  <td>---</td>
+                  <td>NLH</td>
+                </tr>
+                <tr>
+                  <td>MON 12:00</td>
+                  <td>Holdem 8-Max</td>
+                  <td>8pp</td>
+                  <td>1000pp</td>
+                  <td>NLH</td>
+                </tr>
+                <tr>
+                  <td>MON 12:00</td>
+                  <td>Satellite 3K</td>
+                  <td>8pp</td>
+                  <td>10 tickets</td>
+                  <td>NLH</td>
+                </tr>
+                <tr>
+                  <td>MON 09:00</td>
+                  <td>Holdem WarmUp</td>
+                  <td>3pp</td>
+                  <td>---</td>
+                  <td>NLH</td>
+                </tr>
+                <tr>
+                  <td>MON 12:00</td>
+                  <td>Holdem 8-Max</td>
+                  <td>8pp</td>
+                  <td>1000pp</td>
+                  <td>NLH</td>
+                </tr>
+                <tr>
+                  <td>MON 12:00</td>
+                  <td>Satellite 3K</td>
+                  <td>8pp</td>
+                  <td>10 tickets</td>
+                  <td>NLH</td>
+                </tr>
+                <tr>
+                  <td>MON 12:00</td>
+                  <td>Satellite 3K</td>
+                  <td>8pp</td>
+                  <td>10 tickets</td>
+                  <td>NLH</td>
+                </tr>
+                <tr>
+                  <td>MON 09:00</td>
+                  <td>Holdem WarmUp</td>
+                  <td>3pp</td>
+                  <td>---</td>
+                  <td>NLH</td>
+                </tr>
+                <tr>
+                  <td>MON 12:00</td>
+                  <td>Holdem 8-Max</td>
+                  <td>8pp</td>
+                  <td>1000pp</td>
+                  <td>NLH</td>
+                </tr>
+                <tr>
+                  <td>MON 12:00</td>
+                  <td>Satellite 3K</td>
+                  <td>8pp</td>
+                  <td>10 tickets</td>
+                  <td>NLH</td>
+                </tr>
+                <tr>
+                  <td>MON 12:00</td>
+                  <td>Holdem 8-Max</td>
+                  <td>8pp</td>
+                  <td>1000pp</td>
+                  <td>NLH</td>
+                </tr>
+                <tr>
+                  <td>MON 12:00</td>
+                  <td>Satellite 3K</td>
+                  <td>8pp</td>
+                  <td>10 tickets</td>
+                  <td>NLH</td>
+                </tr>
+                <tr>
+                  <td>MON 09:00</td>
+                  <td>Holdem WarmUp</td>
+                  <td>3pp</td>
+                  <td>---</td>
+                  <td>NLH</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
         </div>
       </section>
@@ -536,28 +607,7 @@
   </script>
 	<script src="js/libs/slick.min.js"></script>
   <script src="js/libs/jquery.maskedinput.min.js"></script>
+  <script src="js/libs/tilt.jquery.min.js"></script>
 	<script src="js/main.min.js"></script>
 </body>
 </html>
-
-
-<!-- 
-        Ussually picture (u-pic)
-        <picture>
-          <source type="image/webp" srcset="./img/pic1.webp">
-          <img src="./img/pic1.jpg" srcset="./img/pic1.jpg" alt="pic">
-        </picture>
-          
-        Media picture (m-pic)
-        <picture>
-          <source srcset="./img/pic2.webp" media="(max-width: 768px)">
-          <source type="image/webp" srcset="./img/pic1.webp">
-          <img src="./img/pic1.jpg" srcset="./img/pic1.jpg" alt="pic">
-        </picture>
-
-        Retina pic (r-pic)
-        <picture>
-          <source srcset="./img/pic2.webp, ./img/pic2@2x.webp 2x" media="(max-width: 768px)">
-          <source type="image/webp" srcset="./img/pic1.webp, ./img/pic1@2x.webp 2x">
-          <img src="./img/pic1.jpg" srcset="./img/pic1@2x.jpg 2x" alt="pic">
-        </picture> -->

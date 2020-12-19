@@ -5,10 +5,12 @@ $(function() {
   //= include/accordion.js
 
   function initFunc() {
-    slickReviews();   //Карусель блока отзывов
-    maskPhone();      //Маски для телефона
+    slickReviews(); // CAROUSEL
+    maskPhone(); // MASK FOR PHONE NUMBER
+    playVideo(); // PLAY VIDEO YOUTUBE
   }
   initFunc();
+
 
 
   function slickReviews() {
@@ -28,7 +30,22 @@ $(function() {
     $('.js-maskPhone').mask('+7 (999) 999-99-99', {autoclear: false})
   }
 
+  function playVideo() {
+    let playVideo = document.querySelector('#js-playVideo');
+    let videoContent = document.querySelector('#video-content');
 
+    playVideo.addEventListener('click', function() {
+      console.log('asd')
+      videoContent.classList.add('_is-play')
+      videoContent.innerHTML = '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/u78k9NAkMf8?&autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+    })
+  }
+
+
+
+  $('.js-tiltSmartphone').tilt({
+    reset: false
+  })
 
 });
 

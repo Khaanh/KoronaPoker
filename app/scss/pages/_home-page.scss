@@ -305,6 +305,19 @@
   position: absolute;
   top: -45px;
   right: 6%;
+
+}
+
+.tilt-wrapper {
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.tilt-inner {
+  position: absolute;
+  top: 30%;
+  left: 14%;
+  transform: translateZ(30px);
 }
 
 // ----- Video-block start-----
@@ -361,7 +374,7 @@
   width: 100%;
   height: 100%;
 
-  &._is-active {
+  &._is-play {
     z-index: 30;
   }
 }
@@ -370,9 +383,9 @@
   height: 70px;
   width: 70px;
   border-radius: 50%;
-  border: 2px solid transparent;
   overflow: hidden;
-  background-color: #ab864e;
+  border: none;
+  background: linear-gradient(90deg, #563b2a 0%, #ac782a 100%);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -381,7 +394,7 @@
 
   &:hover {
     @media only screen and (min-width: 1025px) {
-      border: 2px solid #fff;
+      background: linear-gradient(90deg, #ac782a 0%, #563b2a 100%);
       &:after {
         transform: scale(0.9);
       }
@@ -417,30 +430,71 @@
 // ----- Our tournaments block -----
 .our-tournaments {
 
-  table {
-    max-width: 100%;
-    width: 100%;
-    text-align: left;
+}
 
-    thead {}
+.tournaments-table {
+  // overflow: scroll;
+  position: relative;
 
-    tbody {
-      tr {
-        background-color: #242424;
-        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 5px;
-        margin-bottom: 10px;
-        transition: 0.2s ease;
+  .decor-elem-1,
+  .decor-elem-2,
+  .decor-elem-3 {
+    position: absolute;
+  }
 
-        &:hover {
-          @media only screen and (min-width: 1025px) {
-            background-color: $hover-color;
-          }
+  .decor-elem-1 {
+    top: 0;
+    right: -6%;
+  }
+
+  .decor-elem-2 {
+    top: 25%;
+    left: -10%;
+  }
+
+  .decor-elem-3 {
+    bottom: -10%;
+    right: -5%;
+    z-index: 30;
+  }
+}
+
+table {
+  max-width: 100%;
+  width: 100%;
+  text-align: left;
+  position: relative;
+
+  thead {
+
+    tr {
+      height: 54px;
+
+      th {
+        padding: 8px 24px;
+      }
+    }
+  }
+
+  tbody {
+
+    tr {
+      background-color: #242424;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      transition: 0.2s ease;
+      border-bottom: 10px solid $background;
+
+      &:hover {
+        @media only screen and (min-width: 1025px) {
+          background-color: $hover-color;
         }
+      }
 
-        td {
-          border: 1px solid #fff;
-        }
+      td {
+        padding: 12px 24px 8px 24px;
+        font-size: 16px;
+        line-height: 18px;
       }
     }
   }
