@@ -3,6 +3,7 @@ $(function() {
 	//= include/default
 	//= include/sliders
   //= include/accordion.js
+  //= include/modals.js
 
   function initFunc() {
     slickReviews(); // CAROUSEL

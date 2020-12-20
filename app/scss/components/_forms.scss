@@ -41,6 +41,17 @@
   &__btn {
     width: 100%;
     margin-bottom: 20px;
+
+    &--feedback {
+      border: 1px solid transparent;
+      background-color: #ab864e;
+
+      &:hover {
+        @media only screen and (min-width: 1025px) {
+          border: 1px solid #fff;
+        }
+      }
+    }
   }
 
   &__txt {

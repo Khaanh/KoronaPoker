@@ -22,7 +22,7 @@
             <a href="#" class="social-list__link telegram-link" target="_blank" rel="nofollow"></a>
           </li>
         </ul>
-        <a href="#" class="btn header__btn">Написать нам</a>
+        <a href="#" class="btn header__btn js-modal-open" data-target='modal-1'>Написать нам</a>
       </div>
     </div>
 
@@ -32,6 +32,33 @@
     </div>
   </div>
 </footer>
+
+<div class="modal" data-open='modal-1'>
+  <div class="modal-dialog">
+    <div class="modal-content modal-content--feedback">
+      <button class="modal-close js-modal-close"></button>
+      <div class="modal-body modal-body--feedback">
+        <form action="#" class="form">
+          <div class="form__wrapper">
+            <div class="form__title">Оставить заявку</div>
+            <div class="form__holder">
+              <label class="form__label">
+                <input type="text" class="form__control" placeholder="Имя">
+              </label>
+              <label class="form__label">
+                <input type="tel" class="form__control js-maskPhone" placeholder="+7 (999) 999-99-99">
+              </label>
+              <button type="submit" class="btn form__btn form__btn--feedback">Оставить заявку</button>
+            </div>
+            <div class="form__txt">
+              <p>Нажимая на кнопку «Оставить заявку», вы соглашаетесь с <a href="#">политикой конфиденциальности</a>.</p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 <!-- Developer -->
 <div class="develop">
   <a href="https://t.me/kh2nh">Develop by: Khánh Nguyễn</a>
@@ -48,7 +75,7 @@
     </li>
     <li class="html-items">
       <span>2.</span>
-      <a href="./ui-kit.html" class="html-link">UI-Kit.html</a>
+      <a href="./404.html" class="html-link">404.html</a>
     </li>
   </ul>
 </div>
