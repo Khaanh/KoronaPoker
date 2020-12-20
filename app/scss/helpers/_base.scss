@@ -9,6 +9,14 @@
 	overflow-x: hidden;
 	padding-top: 102px;
 	background-color: $background;
+
+	@media only screen and (max-width: 1366px) {
+		padding-top: 83px;  
+	}
+
+	@media only screen and (max-width: 1023px) {
+	  padding-top: 74px;
+	}
 }
 
 .header,
@@ -94,5 +102,7 @@
 }
 
 .js-no-scroll {
-  overflow: hidden;
+	@media only screen and (max-width: 1023px) {
+		overflow: hidden;
+	}
 }
