@@ -2,7 +2,7 @@
 .subtitle-h2 {
   margin-bottom: 60px;
 
-  @media only screen and (max-width: 560px) {
+  @media only screen and (max-width: 767px) {
     margin-bottom: 42px;
   }
 }
@@ -192,6 +192,10 @@
 // ----- Player profit start -----
 .player-profit {
   padding: 50px 0 120px;
+
+  @media only screen and (max-width: 767px) {
+    padding: 50px 0 74px;
+  }
 }
 // Profit-list start
 .profit-list {
@@ -450,6 +454,10 @@
   position: relative;
   padding-bottom: 120px;
 
+  @media only screen and (max-width: 767px) {
+    padding-bottom: 74px;
+  }
+
   &:after,
   &:before {
     content: '';
@@ -462,6 +470,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 0;
+
+    @media only screen and (max-width: 560px) {
+      display: none;
+    }
   }
 
   &:after {
@@ -483,6 +495,10 @@
   z-index: 30;
   border-radius: 10px;
   margin: 0 auto;
+
+  @media only screen and (max-width: 992px) {
+    height: auto;
+  }
 
   &__holder {
     border-radius: 10px;
@@ -517,6 +533,11 @@
   transform: translate(-50%, -50%);
   padding: 0;
 
+  @media only screen and (max-width: 560px) {
+    height: 54px;
+    width: 54px;
+  }
+
   &:hover {
     @media only screen and (min-width: 1025px) {
       background: linear-gradient(90deg, #ac782a 0%, #563b2a 100%);
@@ -536,6 +557,13 @@
     transform: scale(1.2);
     transform-origin: center;
     transition: 0.2s linear;
+
+    @media only screen and (max-width: 560px) {
+      top: 20px;
+      left: 26px;
+      border: 8px solid transparent;
+      border-left: 8px solid #fff;
+    }
   }
 }
 
@@ -543,6 +571,10 @@
   position: absolute;
   bottom: -20%;
   right: -10%;
+
+  @media only screen and (max-width: 1200px) {
+    display: none;
+  }
 }
 
 .chips-02 {
@@ -550,6 +582,10 @@
   position: absolute;
   left: 0;
   top: 0;
+
+  @media only screen and (max-width: 1200px) {
+    display: none;
+  }
 }
 
 // ----- Our tournaments block -----
@@ -644,6 +680,10 @@ table {
 // ----- Bonuses block -----
 .bonuses-block {
   padding: 60px 0;
+
+  @media only screen and (max-width: 767px) {
+    padding: 44px 0;
+  }
 }
 
 .bonuses-list {
@@ -652,6 +692,10 @@ table {
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 0 -10px;
+
+  @media only screen and (max-width: 767px) {
+    flex-direction: column;
+  }
 
   &__items {
     background-image: url(../img/profit-bg.png);
@@ -672,10 +716,38 @@ table {
     margin: 0 10px;
     position: relative;
 
+    @media only screen and (max-width: 1200px) {
+      max-width: calc(33.33333% - 20px);
+    }
+
+    @media only screen and (max-width: 992px) {
+      padding: 40px 16px;
+    }
+
+    @media only screen and (max-width: 767px) {
+      flex: 1 1 auto;
+      max-width: 100%;
+      margin: 10px;
+      padding: 40px 188px 40px 16px;
+      min-height: auto;
+    }
+
+    @media only screen and (max-width: 479px) {
+      padding: 26px 16px;
+    }
+
     picture {
       position: absolute;
       bottom: 0;
       right: 0;
+
+      @media only screen and (max-width: 767px) {
+        max-width: 32%;
+      }
+
+      @media only screen and (max-width: 479px) {
+        display: none;
+      }
     }
   }
 
@@ -696,6 +768,10 @@ table {
   line-height: 25px;
   text-align: center;
   padding: 60px 0;
+
+  @media only screen and (max-width: 767px) {
+    padding: 44px 0;
+  }
 }
 
 .exchequer-app {
@@ -703,10 +779,23 @@ table {
   justify-content: center;
   margin-bottom: 40px;
 
+  @media only screen and (max-width: 992px) {
+    margin: 0 0 28px;
+  }
+
   &__items {
     max-width: 260px;
     width: 100%;
-    margin: 0 10px;
+    margin: 10px;
+
+    @media only screen and (max-width: 767px) {
+      margin: 5px;
+      max-width: calc(50% - 10px);
+    }
+
+    @media only screen and (max-width: 479px) {
+      max-width: 100%;
+    }
   }
 
   &__link {
@@ -720,6 +809,10 @@ table {
 .faq-block {
   padding: 60px 0;
   position: relative;
+
+  @media only screen and (max-width: 767px) {
+    padding: 44px 0;
+  }
 }
 
 .faq-card {
@@ -727,12 +820,20 @@ table {
   display: inline-block;
   top: 0%;
   left: 0;
+
+  @media only screen and (max-width: 1200px) {
+    display: none;
+  }
 }
 
 .chips-03 {
   position: absolute;
   bottom: -10%;
   right: 20%;
+
+  @media only screen and (max-width: 992px) {
+    display: none;
+  }
 }
 
 // ----- Block reviews -----
@@ -801,6 +902,10 @@ table {
     overflow: hidden;
     position: relative;
     margin: 0 auto;
+
+    @media only screen and (max-width: 1260px) {
+      max-width: 320px;
+    }
   }
 
   &__author {

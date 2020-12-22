@@ -23,7 +23,14 @@ $(function() {
       slidesToScroll: 1,
       dots: false,
       lazyLoad: 'ondemand',
-      appendArrows: $('.js-reviewsNav')
+      appendArrows: $('.js-reviewsNav'),
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+          }
+        }
+      ]
     })
   };
 
