@@ -26,8 +26,15 @@ $(function() {
       appendArrows: $('.js-reviewsNav'),
       responsive: [
         {
-          breakpoint: 1200,
+          breakpoint: 991,
           settings: {
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: 560,
+          settings: {
+            slidesToShow: 1
           }
         }
       ]
