@@ -12,9 +12,17 @@
   height: 100vh;
   overflow: auto;
   text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 
   &__pic {
     margin-bottom: 28px;
+
+    @media only screen and (max-width: 1023px) {
+      max-width: 72%;
+    }
   }
 
   &__content {
