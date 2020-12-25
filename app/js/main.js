@@ -69,8 +69,6 @@ $(function() {
       mobMenu.classList.toggle('_is-open')
     })
   };
-
-
 });
 
 document.addEventListener('DOMContentLoaded', appendBtnToHeader)
@@ -88,4 +86,10 @@ function appendBtnToHeader() {
       headerWidget.append(btnCTA);
     }
   };
+
+let videoID = document.querySelector('#js-playVideo')
+
+window.addEventListener('scroll', function() {
+  // console.log(videoID.scrollTop)
+})
 

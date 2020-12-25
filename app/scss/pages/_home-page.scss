@@ -9,6 +9,7 @@
 // ----- Hero block start -----
 .hero {
   background-image: url(../img/hero-bg.png);
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -169,9 +170,7 @@
     }
 
     p {
-      @media only screen and (max-width: 1260px) {
-        margin: 0;
-      }
+      margin: 0;
     }
   }
 
@@ -208,6 +207,7 @@
   &__items {
     list-style: none;
     background-image: url(../img/profit-bg.png);
+    background-attachment: fixed;
     background-position: center;
     background-size: auto;
     background-repeat: repeat;
@@ -304,6 +304,7 @@
     display: flex;
     justify-content: space-between;
     background-image: url(../img/hero-bg.png);
+    background-attachment: fixed;
     background-position: left top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -699,6 +700,7 @@ table {
 
   &__items {
     background-image: url(../img/profit-bg.png);
+    background-attachment: fixed;
     background-position: center;
     background-size: auto;
     background-repeat: repeat;
@@ -953,6 +955,7 @@ table {
   &__wrapper {
     background-color: #0e0e0f;
     background-image: url(../img/request-bg.png);
+    background-attachment: fixed;
     background-position: left top;
     background-repeat: no-repeat;
     background-size: cover;
