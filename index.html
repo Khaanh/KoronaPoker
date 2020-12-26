@@ -1,62 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="format-detection" content="telephone=no">
-		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=0,shrink-to-fit=no">
-		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<title>Korona Poker</title>
-	  <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600&display=swap" rel="stylesheet">
-	  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-	  
-	  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-	  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-	  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-	  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-	  <meta name="msapplication-TileColor" content="#da532c">
-	  <meta name="theme-color" content="#ffffff">
-	
-		<link rel="stylesheet" href="css/main.min.css">
-		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">	
-		<link rel="apple-touch-icon" href="favicon.ico">
-	</head>
+	//= layout/_head.html
 <body>
 	<div class="wrapper">
 		<main class="main-page">
-			<header class="header">
-				<div class="container header__container" id="js-headerContainer">
-			    <a href="./" class="logo">
-			      <img src="./img/logo.svg" alt="logo" width="93" height="68">
-			    </a>
-			    <div class="header__nav" id="js-mobMenu">
-			      <nav class="nav">
-			        <ul>
-			          <li><a href="#">Преимущества</a></li>
-			          <li><a href="#">Турниры</a></li>
-			          <li><a href="#">Акции и бонусы</a></li>
-			          <li><a href="#">FAQ</a></li>
-			          <li><a href="#">Отзывы</a></li>
-			        </ul>  
-			      </nav>
-			      <div class="header__widget" id="js-headerWidget">
-			        <ul class="social-list">
-			          <li class="social-list__items">
-			            <a href="#" class="social-list__link inst-link" target="_blank" rel="nofollow"></a>
-			          </li>
-			          <li class="social-list__items">
-			            <a href="#" class="social-list__link telegram-link" target="_blank" rel="nofollow"></a>
-			          </li>
-			        </ul>
-			        <a href="#" class="btn header__btn js-modal-open" data-target='modal-1' id="js-btnCallToAct">Написать нам</a>
-			      </div>
-			    </div>
-			    <div class="burger" id="js-burgerBtn">
-			      <div class="burger__holder">
-			        <i class="line"></i>
-			      </div>
-			    </div>
-				</div>
-			</header>
+			//= layout/_header.html
 
 			<section class="hero">
         <div class="container hero__container">
@@ -124,7 +72,7 @@
       </section>
       <!-- .hero -->
 
-      <section class="player-profit">
+      <section class="player-profit" id="profit">
         <div class="container">
           <h2 class="subtitle-h2">Почему с нами выгодно играть</h2>
 
@@ -267,7 +215,7 @@
       </section>
       <!-- .video-block -->
 
-      <section class="our-tournaments">
+      <section class="our-tournaments" id="tourney">
         <div class="container">
           <h2 class="subtitle-h2">Наши турниры</h2>
 
@@ -434,7 +382,7 @@
       </section>
       <!-- bonuses-block -->
 
-      <section class="exchequer-block">
+      <section class="exchequer-block" id="bonuses">
         <div class="container">
           <h2 class="subtitle-h2">Способы ввода и вывода средств</h2>
           <ul class="app-list exchequer-app">
@@ -472,7 +420,7 @@
       </section>
       <!-- .exchequer-block -->
 
-      <section class="faq-block">
+      <section class="faq-block" id="faq">
         <div class="container">
           <h2 class="subtitle-h2">FAQ</h2>
           <!-- Accordion -->
@@ -604,7 +552,7 @@
       </section>
       <!-- .request-block -->
 
-      <section class="reviews-block">
+      <section class="reviews-block" id="reviews">
         <div class="container">
           <h2 class="subtitle-h2">Посмотрите отзывы тех, кто уже <br> зарабатывает с нами</h2>
           <div class="reviews-container">
@@ -648,146 +596,9 @@
       </section>
       <!-- .block-reviews -->
 			
+      <a href="#" class="go-to-top" id="js-linkGoTop"></a>
 		</main>
-		<footer class="footer">
-		  <div class="container">
-		    <div class="footer__nav">
-		      <a href="./" class="logo">
-		        <img src="./img/logo.svg" alt="logo" width="93" height="68">
-		      </a>
-		      <nav class="nav">
-		        <ul>
-		          <li><a href="#">Преимущества</a></li>
-		          <li><a href="#">Турниры</a></li>
-		          <li><a href="#">Акции и бонусы</a></li>
-		          <li><a href="#">FAQ</a></li>
-		          <li><a href="#">Отзывы</a></li>
-		        </ul>  
-		      </nav>
-		      <div class="footer__widget">
-		        <ul class="social-list">
-		          <li class="social-list__items">
-		            <a href="#" class="social-list__link inst-link" target="_blank" rel="nofollow"></a>
-		          </li>
-		          <li class="social-list__items">
-		            <a href="#" class="social-list__link telegram-link" target="_blank" rel="nofollow"></a>
-		          </li>
-		        </ul>
-		        <a href="#" class="btn header__btn js-modal-open" data-target='modal-1'>Написать нам</a>
-		      </div>
-		    </div>
-		
-		    <div class="footer__bottom">
-		      <p>© 2020 Korona. Все права защищены</p>
-		      <a href="#">Политика конфиденциальности</a>
-		    </div>
-		  </div>
-		</footer>
-		
-		<div class="modal" data-open='modal-1'>
-		  <div class="modal-dialog">
-		    <div class="modal-content modal-content--feedback">
-		      <button class="modal-close js-modal-close"></button>
-		      <div class="modal-body modal-body--feedback">
-		        <form action="#" class="form">
-		          <div class="form__wrapper">
-		            <div class="form__title">Оставить заявку</div>
-		            <div class="form__holder">
-		              <label class="form__label">
-		                <input type="text" class="form__control" placeholder="Имя">
-		              </label>
-		              <label class="form__label">
-		                <input type="tel" class="form__control js-maskPhone" placeholder="+7 (999) 999-99-99">
-		              </label>
-		              <button type="submit" class="btn form__btn form__btn--feedback">Оставить заявку</button>
-		            </div>
-		            <div class="form__txt">
-		              <p>Нажимая на кнопку «Оставить заявку», вы соглашаетесь с <a href="#">политикой конфиденциальности</a>.</p>
-		            </div>
-		          </div>
-		        </form>
-		      </div>
-		    </div>
-		  </div>
-		</div>
-		<!-- Developer -->
-		<div class="develop">
-		  <a href="https://t.me/kh2nh">Develop by: Khánh Nguyễn</a>
-		</div>
-		<!-- ========================== -->
-		<div class="html-wrap">
-		  <div class="toggle-menu js-close-menu">
-		    <span>Close list</span>
-		  </div>
-		  <ul class="html-list">
-		    <li class="html-items">
-		      <span>1.</span>
-		      <a href="./index.html" class="html-link">index.html</a>
-		    </li>
-		    <li class="html-items">
-		      <span>2.</span>
-		      <a href="./404.html" class="html-link">404.html</a>
-		    </li>
-		  </ul>
-		</div>
-		
-		<style>
-		  .html-wrap {
-		    position: fixed;
-		    bottom: 0;
-		    right: 0;
-		    border: 2px solid #000;
-		    background: #fff;
-		    z-index: 999;
-		  }
-		  .html-list {
-		    padding: 12px 8px;
-		    height: 200px;
-		    overflow: auto;
-		    height: auto;
-		    width: auto;
-		    display: block;
-		  }
-		  .inactive {
-		    display: none;
-		  }
-		  .html-items {
-		    margin: 4px 0;
-		    display: flex;
-		    align-items: center;
-		    justify-content: flex-start;
-		  }
-		  .html-items span {
-		    display: inline-block;
-		    margin-right: 6px;
-		    min-width: 21px;
-		  }
-		  .html-link {
-		    color: #000;
-		    display: block;
-		    font-size: 14px;
-		    font-weight: 400;
-		  }
-		  .html-link:hover {
-		    text-decoration: none;
-		  }
-		  .toggle-menu {
-		    color: #000;
-		    display: block;
-		    border-bottom: 1px solid #000;
-		    cursor: pointer;
-		    padding: 0;
-		    text-align: right;
-		  }
-		  .toggle-menu span {
-		    text-align: center;
-		    display: block;
-		    background: #000;
-		    color: #fff;
-		    padding: 0 6px;
-		  }
-		</style>
-		<!-- ========================== -->
+		//= layout/_footer.html
 	</div>
 	
 	<noscript>Detected missing Javascript support. Certain website features will not operate correctly with Javascript disabled.</noscript>
