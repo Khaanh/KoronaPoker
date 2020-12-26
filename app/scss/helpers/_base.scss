@@ -37,55 +37,51 @@
 	color: $txt-color;
 }
 
-// Btn up  Styles
-.back-to-top {
-	position: fixed;
-	right: 15px;
-	bottom: 15px;
-	z-index: 777;
-	cursor: pointer;
-	height: 34px;
-	width: 34px;
-	opacity: 0;
-	visibility: hidden;
-	pointer-events: none;
-	transition: all 0.3s ease;
-	> svg {
-		width: 100%;
-		height: 100%;
-		transform: rotate(-90deg);
-	}
-	&.show {
-		opacity: 1;
-		visibility: visible;
-		pointer-events: auto;
-	}
-}
-
-// Slick styles
-.slick-arrow {
-	cursor: pointer;
+// Slider dots
+.slick-dots {
 	display: flex;
-	justify-content: center;
 	align-items: center;
-	transition: 0.2s ease;
-	&:hover {
-		background-color: $black;
-		> svg {
-			path {
-				fill: $white;
+	justify-content: center;
+	margin-top: 24px;
+
+	li {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0 4px;
+
+		&.slick-active {
+			button {
+				&:after {
+					transform: translate(-50%, -50%) scale(1);
+				}
 			}
 		}
-	}
-	> svg {
-		transition: 0.3s ease-in-out;
-	}
-	&.next-arrow {
-		transform: rotate(180deg);
-		right: -40px;
-	}
-	&.prev-arrow {
-    left: -40px;
+
+		button {
+			background: $hover-color;
+			border: none;
+			color: transparent;
+			height: 16px;
+			width: 16px;
+			border-radius: 50%;
+			padding: 0;
+			position: relative;
+
+			&:after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%) scale(0);
+				display: inline-block;
+				height: 8px;
+				width: 8px;
+				border-radius: 50%;
+				background-color: #fff;
+				transition: 0.3s ease;
+			}
+		}
 	}
 }
 

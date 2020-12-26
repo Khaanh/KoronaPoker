@@ -1,16 +1,9 @@
 $(window).on('scroll', function() {
-  // Active header
-  if( $(this).scrollTop() > 150) {
-    $('.header').addClass('is-active')
-  } else {
-    $('.header').removeClass('is-active')
-  }
-  
   // Active btn to top
   if( $(this).scrollTop() > 300) {
-    $('.back-to-top').addClass('show')
+    $('#js-linkGoTop').addClass('is-show')
   } else {
-    $('.back-to-top').removeClass('show')
+    $('#js-linkGoTop').removeClass('is-show')
   }
 })
 
@@ -22,7 +15,7 @@ $('.js-scroll-next').click(function(e) {
 })
 
 // Acttion btn to top
-$('.back-to-top').on('click', function() {
+$('#js-linkGoTop').on('click', function() {
   $('html, body').animate({scrollTop:0}, 500)
   return false;
 })
@@ -31,16 +24,30 @@ $('.back-to-top').on('click', function() {
 // Following Scroll
 $('.nav > ul > li > a').on( 'click', function(){ 
   let link = $(this);
-  let dest = link.attr('href'); 
+  let dest = link.attr('href');
+  let body = document.querySelector('body');
+  let mobMenu = document.querySelector('#js-mobMenu');
+  let burgerBtn = document.querySelector('#js-burgerBtn');
+
+
   if(dest !== undefined && dest !== '') {
     $('html').animate({ 
       scrollTop: $(dest).offset().top - 86
     }, 1000);
   }
+
+  if (dest !== undefined && dest !== '' && body.classList.contains('js-no-scroll') && 
+      mobMenu.classList.contains('_is-open') && burgerBtn.classList.contains('_is-active')) {
+
+    body.classList.remove('js-no-scroll');
+    mobMenu.classList.remove('_is-open');
+    burgerBtn.classList.remove('_is-active');
+
+    $('html').animate({ 
+      scrollTop: $(dest).offset().top - 86
+    }, 1000);
+    // alert('ads')
+  }
+
   return false;
 });
-
-// Start from top
-// $(window).on('beforeunload', function() {
-//   $(window).scrollTop(0);
-// })

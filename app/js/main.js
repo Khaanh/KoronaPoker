@@ -24,17 +24,23 @@ $(function() {
       dots: false,
       lazyLoad: 'ondemand',
       appendArrows: $('.js-reviewsNav'),
+      arrows: true,
+      adaptiveHeight: true,
       responsive: [
         {
           breakpoint: 991,
           settings: {
-            slidesToShow: 2
+            slidesToShow: 2,
+            arrows: false,
+            dots: true,
           }
         },
         {
           breakpoint: 560,
           settings: {
-            slidesToShow: 1
+            slidesToShow: 1,
+            arrows: false,
+            dots: true,
           }
         }
       ]
@@ -50,7 +56,6 @@ $(function() {
     let videoContent = document.querySelector('#video-content');
 
     playVideo.addEventListener('click', function() {
-      console.log('asd')
       videoContent.classList.add('_is-play')
       videoContent.innerHTML = '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/u78k9NAkMf8?&autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
     })
@@ -69,10 +74,15 @@ $(function() {
       mobMenu.classList.toggle('_is-open')
     })
   };
+
+
 });
 
+
+//EVENT LISTENER LIST
 document.addEventListener('DOMContentLoaded', appendBtnToHeader)
 window.addEventListener('resize', appendBtnToHeader)
+// window.addEventListener('scroll', scrollToTop)
 
 // FUNCTIONAL APPEND BTN TO HEADER 
 function appendBtnToHeader() {
@@ -87,9 +97,20 @@ function appendBtnToHeader() {
     }
   };
 
-let videoID = document.querySelector('#js-playVideo')
 
-window.addEventListener('scroll', function() {
-  // console.log(videoID.scrollTop)
-})
+// function scrollToTop() {
+//   let offsetTop = window.pageYOffset;
+//   let linkGoTop = document.querySelector('#js-linkGoTop');
 
+//   if (offsetTop > 300 || undefined) {
+//     linkGoTop.classList.add('is-active')
+//   } else {
+//     linkGoTop.classList.remove('is-active')
+//   }
+
+
+// }
+// linkGoTop.addEventListener('click', () => {
+//   $('html, body').animate({scrollTop:0}, 500)
+//   return false;
+// })

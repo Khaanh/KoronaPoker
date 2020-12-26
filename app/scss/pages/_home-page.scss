@@ -6,6 +6,7 @@
     margin-bottom: 42px;
   }
 }
+
 // ----- Hero block start -----
 .hero {
   background-image: url(../img/hero-bg.png);
@@ -886,11 +887,27 @@ table {
 
   .slick-prev {
     left: -4%;
+
+    @media only screen and (max-width: 1280px) {
+      left: -1%;
+    }
+
+    @media only screen and (max-width: 1200px) {
+      left: 0;
+    }
   }
 
   .slick-next {
     right: -4%;
     transform: rotate(180deg);
+
+    @media only screen and (max-width: 1280px) {
+      right: -1%;
+    }
+
+    @media only screen and (max-width: 1200px) {
+      right: 0;
+    }
   }
 }
 
@@ -1039,5 +1056,34 @@ table {
     bottom: 0;
     left: 50%;
     transform: translate(-50%, 0)
+  }
+}
+
+.go-to-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../img/icon-navigation-white.svg);
+  background-repeat: no-repeat;
+  background-size: 12px;
+  background-position: center;
+  transform: rotate(90deg) translate(130px, 0) scale(0);
+  background-color: $hover-color;
+  position: fixed;
+  right: 10px;
+  bottom: 150px;
+  border-radius: 50%;
+  height: 32px;
+  width: 32px;
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+  transition: all 0.5s ease-in-out;
+
+  &.is-show {
+    opacity: 1;
+    visibility: visible;
+    z-index: 30;
+    transform: rotate(90deg) translate(0, 0) scale(1);
   }
 }
