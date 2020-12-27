@@ -75,12 +75,30 @@ $(function() {
     })
   };
 
+    // Animation while scrolling
+  let doAnimation = function doAnimation() {
+    let scrollTop = $(document).scrollTop();
+    
+    $('.js-animate:not(.animate)').each(function (key, item) {
+      let windowScroll = $(window).height() + scrollTop,
+      elementOffset = $(item).offset().top + 80;
 
+      if (windowScroll >= elementOffset && elementOffset !== undefined) {
+
+        $(item).addClass('_is-animate');
+      }
+    });
+  };
+
+  $(document).on('scroll', function () {
+    doAnimation();
+  });
 });
 
 
 //EVENT LISTENER LIST
 document.addEventListener('DOMContentLoaded', appendBtnToHeader)
+window.addEventListener('load', animateHero)
 window.addEventListener('resize', appendBtnToHeader)
 // window.addEventListener('scroll', scrollToTop)
 
@@ -92,25 +110,20 @@ function appendBtnToHeader() {
 
   if (window.innerWidth <= 1023) {
     headerContainer.append(btnCTA);
-    } else {
-      headerWidget.append(btnCTA);
-    }
-  };
+  } else {
+    headerWidget.append(btnCTA);
+  }
+};
 
+function animateHero() {
+  let heroDescr = document.querySelector('#js-heroDescr');
+  let heroRight = document.querySelector('#js-heroAnimateRight');
+  let heroItems = document.querySelectorAll('.js-heroItems');
 
-// function scrollToTop() {
-//   let offsetTop = window.pageYOffset;
-//   let linkGoTop = document.querySelector('#js-linkGoTop');
+  heroItems.forEach( item => {
+    item.classList.add('_is-animate')
+  })
 
-//   if (offsetTop > 300 || undefined) {
-//     linkGoTop.classList.add('is-active')
-//   } else {
-//     linkGoTop.classList.remove('is-active')
-//   }
-
-
-// }
-// linkGoTop.addEventListener('click', () => {
-//   $('html, body').animate({scrollTop:0}, 500)
-//   return false;
-// })
+  heroDescr.classList.add('_is-animate');
+  heroRight.classList.add('_is-animate');
+}

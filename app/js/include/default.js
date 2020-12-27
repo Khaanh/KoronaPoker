@@ -20,7 +20,6 @@ $('#js-linkGoTop').on('click', function() {
   return false;
 })
 
-
 // Following Scroll
 $('.nav > ul > li > a').on( 'click', function(){ 
   let link = $(this);
