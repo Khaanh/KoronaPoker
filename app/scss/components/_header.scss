@@ -25,7 +25,7 @@
     align-items: center;
     width: 100%;
 
-    @media only screen and (max-width: 1023px) {
+    @media only screen and (max-width: 1024px) {
       position: fixed;
       top: 74px;
       left: 0;
@@ -59,7 +59,7 @@
     display: flex;
     align-items: center;
 
-    @media only screen and (max-width: 1023px) {
+    @media only screen and (max-width: 1024px) {
       flex-direction: column-reverse;
     }
   }
@@ -70,8 +70,7 @@
     padding: 7px 14px;
     z-index: 30;
 
-    @media only screen and (max-width: 1023px) {
-      // margin: 0;
+    @media only screen and (max-width: 1024px) {
       margin-right: 64px;
     }
 
@@ -88,8 +87,9 @@
   .nav {
     margin: 0 auto;
 
-    @media only screen and (max-width: 1023px) {
+    @media only screen and (max-width: 1024px) {
       width: 100%;
+      // overflow: auto;
       margin-bottom: 28px;
     }
 
@@ -97,7 +97,7 @@
       list-style: none;
       display: flex;
 
-      @media only screen and (max-width: 1023px) {
+      @media only screen and (max-width: 1024px) {
         flex-direction: column;
         width: 100%;
       }
@@ -109,7 +109,7 @@
           margin-right: 24px;
         }
 
-        @media only screen and (max-width: 1023px) {
+        @media only screen and (max-width: 1024px) {
           margin: 0;
           width: 100%;
           text-align: center;
@@ -148,8 +148,9 @@
           text-decoration: none;
           padding: 4px 8px;
 
-          @media only screen and (max-width: 1023px) {
-            font-size: 20px;  
+          @media only screen and (max-width: 1024px) {
+            font-size: 32px;
+            line-height: 1.5;
           }
 
           &:hover {
@@ -162,7 +163,7 @@
             }
           }
 
-          @media only screen and (max-width: 1023px) {
+          @media only screen and (max-width: 1024px) {
             display: block;
             width: 100%;
             padding: 8px;
@@ -195,14 +196,14 @@
     margin-right: 24px;
   }
 
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 1024px) {
     margin: 0;
   }
 
   &__items {
     margin-right: 8px;
 
-    @media only screen and (max-width: 1023px) {
+    @media only screen and (max-width: 1024px) {
       margin-right: 20px;
     }
 
@@ -233,9 +234,9 @@
       }
     }
 
-    @media only screen and (max-width: 1023px) {
-      height: 38px;
-      width: 38px;
+    @media only screen and (max-width: 1024px) {
+      height: 52px;
+      width: 52px;
     }
 
     &:after,
@@ -255,7 +256,7 @@
     &:before {
       transform: translate(-50%, 120%);
 
-      @media only screen and (max-width: 1023px) {
+      @media only screen and (max-width: 1024px) {
         display: none;
       }
     }
@@ -290,110 +291,10 @@
 .logo {
   display: flex;
 
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 1024px) {
     height: 54px;
   }
 }
-
-// // Nav block start
-// .nav {
-//   margin: 0 auto;
-
-//   @media only screen and (max-width: 1023px) {
-//     width: 100%;
-//     margin-bottom: 28px;
-//   }
-
-//   ul {
-//     list-style: none;
-//     display: flex;
-
-//     @media only screen and (max-width: 1023px) {
-//       flex-direction: column;
-//       width: 100%;
-//     }
-
-//     li {
-//       margin-right: 48px;
-
-//       @media only screen and (max-width: 1200px) {
-//         margin-right: 24px;
-//       }
-
-//       @media only screen and (max-width: 1023px) {
-//         margin: 0;
-//         width: 100%;
-//         text-align: center;
-//         transform: translateX(-100%);
-//       }
-
-//       &:first-child {
-//         transition-duration: 0.3s;
-//       }
-
-//       &:nth-child(2) {
-//         transition-duration: 0.5s;
-//       }
-
-//       &:nth-child(3) {
-//         transition-duration: 0.7s;
-//       }
-
-//       &:nth-child(4) {
-//         transition-duration: 0.9s;
-//       }
-
-//       &:last-child {
-//         margin-right: 0;
-//         transition-duration: 1.1s;
-//       }
-
-//       a {
-//         font-family: $main-font;
-//         font-size: 16px;
-//         line-height: 30px;
-//         color: $white;
-//         display: inline-block;
-//         position: relative;
-//         transition: 0.2s linear;
-//         text-decoration: none;
-//         padding: 4px 8px;
-
-//         @media only screen and (max-width: 1023px) {
-//           font-size: 20px;  
-//         }
-
-//         &:hover {
-//           @media only screen and (min-width: 1025px) {
-//             color: $hover-color;
-
-//             &:after {
-//               width: calc(100% - 16px);
-//             }    
-//           }
-//         }
-
-//         @media only screen and (max-width: 1023px) {
-//           display: block;
-//           width: 100%;
-//           padding: 8px;
-//         }
-
-//         &:after {
-//           content: '';
-//           position: absolute;
-//           bottom: 6px;
-//           left: 8px;
-//           width: 0%;
-//           transform-origin: left;
-//           transition: 0.2s linear;
-//           height: 1px;
-//           background-color: $hover-color;
-//         }
-//       }
-//     }
-//   }
-// }
 
 // Burger
 .burger {
@@ -401,7 +302,7 @@
   width: 34px;
   display: none;
 
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 1024px) {
     display: block;
     position: absolute;
     top: 50%;

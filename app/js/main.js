@@ -108,7 +108,7 @@ function appendBtnToHeader() {
   let headerWidget = document.querySelector('#js-headerWidget');
   let btnCTA = document.querySelector('#js-btnCallToAct');
 
-  if (window.innerWidth <= 1023) {
+  if (window.innerWidth <= 1024) {
     headerContainer.append(btnCTA);
   } else {
     headerWidget.append(btnCTA);
